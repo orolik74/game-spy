@@ -283,9 +283,9 @@ public class RoomController : ControllerBase
             }
         }
 
-        var cards = gameService.AssignCards(gameSession);
-        string userCardWord = cards[currentUserId].Word;
-        bool isAmogus = cards[currentUserId].IsSpy;
+        var card = gameService.GetPlayerCardByID(gameSession, currentUserId);
+        string userCardWord = card.Word;
+        bool isAmogus = card.IsSpy;
 
 
         var apiMessages = new List<Message>();
