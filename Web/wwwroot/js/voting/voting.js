@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     ensureFinishVoteSection();
+    bindVoteResultModal();
 
     const token = localStorage.getItem('jwt_token');
 

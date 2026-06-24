@@ -29,11 +29,16 @@ function hideLobbyControls() {
     const readyBtn = document.getElementById('readyBtn');
     const themeBlock = document.getElementById('themeBlock');
     const wordBlock = document.getElementById('wordBlock');
+    const chatInput = document.getElementById('chatInput');
 
     if (readyBtn) readyBtn.style.display = 'none';
     if (startBtn) startBtn.style.display = 'none';
     if (themeBlock) themeBlock.classList.remove('hidden');
     if (wordBlock) wordBlock.classList.remove('hidden');
+    if (chatInput) {
+        chatInput.disabled = false;
+        chatInput.placeholder = 'Ваше сообщение...';
+    }
 }
 
 function applyInGameState(data) {
